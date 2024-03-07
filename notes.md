@@ -33,3 +33,27 @@
 
 ## 插件机制
 vue必须提供一个install方法才可以用的，在这个install方法中可以拿到vue的实例（app）
+
+## 本地持久化
+通常，我们在前端可以临时缓存数据，而后通过更新队列将数据同步至后端服务。本地存储通常采用的方案有：
+1. localstorage
+2. indexedDB
+3. webSQL，已废弃，不用了解
+
+通常小数据量可以直接选用 localStorege，但是需要注意的是其数据序列化与反序列化的实现。（）
+对于较大数据量，我们可以选用 indexedDB，当然直接操作会略微有点麻烦，我们可以选择使用 Dexie https://github.com/dexie/Dexie.js
+
+indexedDB + service worker 就能实现本地离线应用
+
+## webpack的treeshaking
+treeshaking的前提条件：ESmodule
+
+## 图表渲染器
+用来做大屏类的项目一般选用d3+svg，一般用svg做渲染的时候选择使用d3进行封装处理；
+数据量比较大、3d的比较炫酷的就用canvas；
+
+## echarts双引擎
+echarts底层用的是zrender
+
+## 专业术语
+图表渲染器、图表数据格式化器、数据校验器、数据协议、组件通用协议、组件数据协议、图表数据协议
