@@ -57,3 +57,9 @@ echarts底层用的是zrender
 
 ## 专业术语
 图表渲染器、图表数据格式化器、数据校验器、数据协议、组件通用协议、组件数据协议、图表数据协议
+
+## 序列化操作
+建议使用serialize-javascript库，JSON.stringify存在一些问题，比如循环引用，详情可以看https://github.com/microsoft/TypeScript/issues/14153
+
+## vue3优化
+vue3是响应式数据，分为深层响应（reactive）和浅层响应（shalloRef）
